@@ -1,0 +1,169 @@
+/*css reset */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+
+:root{
+
+  /* Primary Colours */
+
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Neutral Colours */
+
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+
+  font-size: 15px;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--very-light-gray);
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper{
+  background-color: var(--very-light-gray);
+  max-width: 100%;
+  max-height: 100%;
+  padding: 3% 3% 0% ;
+}
+
+
+.heading{
+  width: 100%;
+  text-align: center;
+}
+
+.heading h2{
+  display: flex;
+  flex-direction: column;
+  color: var(--very-dark-blue);
+}
+
+.heading .top{
+  font-weight: normal;
+  
+}
+
+.heading p{
+  color: var(--grayish-blue);
+  padding: 0 25%;
+}
+
+
+
+.cards{
+  min-height: 70vh;
+  margin: 20px 0 0;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.cards h3{
+  color: var(--very-dark-blue);
+}
+
+.cards p{
+  color: var(--grayish-blue);
+}
+
+.cards img{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.tiles{
+  background-color: white;
+  position: relative;
+  margin: 15px;
+  border:  white solid 0.1px;
+  border-radius: 5px/5px;
+  padding: 20px;
+  box-shadow: 2px 2px 4px 2px var(--grayish-blue);
+  border-top-width: 5px;
+}
+
+.supervisor{
+  grid-column: 1/7;
+  grid-row: 3/7;
+  border-top-color: var(--cyan);
+}
+
+.team-builder{
+  grid-column: 7/13;
+  grid-row: 1/5;
+  border-top-color: var(--red);
+}
+
+.karma{
+  grid-column: 7/13;
+  grid-row: 5/9;
+  border-radius: 5px/5px;
+  border-top-color: var(--orange);
+}
+
+.calculator{
+  grid-column: 13/19;
+  grid-row: 3/7;
+  border-top-color: var(--blue);
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+      color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width:800px) {
+
+  body{
+    height: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heading p{
+    padding: 0;
+    max-width: 350px;
+  }
+
+  .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tiles{
+    height: 20vh;
+    width: 50vw;
+    min-width: 350px;
+  }
+
+
+}
